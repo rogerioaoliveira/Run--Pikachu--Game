@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 .game-board{
     width: 100vw;
     height: 100vh;
@@ -12,16 +14,19 @@
     position: relative;
     overflow: hidden;
 }
+
 .stone{
     position: absolute;
     width: 80px;
     height: 150px;
     bottom: 10px;
     right: 100%;
-} 
+}
+
 .stoneAnimation{
     animation: stone-animation 1.5s infinite linear;
 }
+
 .walking{
     position: absolute;
     width: 150px;
@@ -29,12 +34,14 @@
     left: 70px;
     display: none;
 }
+
 .stopped{
     width: 170px;
     position: absolute;
     left: 70px;
     bottom: 50px;
 }
+
 .jump{
     animation: jump 500ms ease-out;
 }
@@ -51,6 +58,53 @@
     position: absolute;
     left: 70px;
     display: none;
+}
+
+.game-over{
+    position: absolute;
+    width: 40vw;
+    height: 80vh;
+    background-color: yellow;
+    border: 3px solid darkgoldenrod;
+    border-radius: 20px;
+    top: 10%;
+    left: 30%;
+    display: none;
+}
+
+.end{
+    position: absolute;
+    margin: auto;
+    width: 170px;
+    left: 28%;
+}
+
+#txt-end{
+    padding: 10px;
+    color: red;
+    margin: auto;
+    text-align: center;
+}
+
+#txt{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 60%;
+    color: rgb(0, 66, 0);
+}
+
+#btn{
+    width: 17%;
+    height: 10%;
+    border: 1.5px solid rgb(0, 66, 0);
+    border-radius: 5px;
+    background-color: rgb(0, 223, 0);
+    color: rgb(0, 66, 0);
+    position: relative;
+    top: 62%;
+    left: 42%;
+    cursor: pointer;
 }
 
 @keyframes stone-animation {

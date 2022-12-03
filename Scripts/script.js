@@ -2,7 +2,14 @@ const pikachu = document.querySelector('.walking');
 const pikachuStopped = document.querySelector('.stopped');
 const stone = document.querySelector('.stone');
 const pikachuCrying = document.querySelector('.cry');
+const gameOver = document.querySelector('.game-over');
+const btn = document.querySelector('#btn');
 const count = 0;
+
+btn.addEventListener("click", function() {
+    
+    location.reload();
+});
 
 const jump = () => {
     if(event.key == "ArrowUp"){
@@ -26,6 +33,7 @@ const loop = setInterval(() => {
         pikachu.style.display="none";
         pikachuCrying.style.display="block";
         pikachuCrying.style.bottom=`${pikachuPosition + 30}px`;      
+        gameOver.style.display="block";
     }
 }, 10);
 
